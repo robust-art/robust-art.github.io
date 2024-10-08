@@ -193,7 +193,7 @@
             although traditional iterative methods such as sequential convex programming impose significant computational challenges. 
           </p>
           <p>
-            To mitigate this burden, the Autonomous Rendezvous Transformer introduced 
+            To mitigate this burden, the <a href="https://rendezvoustransformer.com">Autonomous Rendezvous Transformer</a> introduced 
             a generative model trained to provide near-optimal initial guesses.
             This approach provides convergence to better local optima (e.g., fuel optimality), 
             improves feasibility rates, and results in faster convergence speed of optimization algorithms through warm-starting.
@@ -203,8 +203,8 @@
           </p>
           <p>
             Through extensive experimentation, the proposed warm-starting strategy is shown to 
-            consistently produce high-quality reference trajectories, achieving up to 30\% cost improvement 
-            and 50\% reduction in infeasible cases compared to conventional methods, demonstrating 
+            consistently produce high-quality reference trajectories, achieving up to 30% cost improvement 
+            and 50% reduction in infeasible cases compared to conventional methods, demonstrating 
             robust performance across multiple state representations.
             Additionally, a post hoc evaluation framework is proposed to assess the quality
             of generated trajectories and mitigate runtime failures, marking an initial step 
@@ -223,23 +223,46 @@
     </div>
 
 
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Numerical Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            Two complexities are added to the rendezvous problem in order to get closer to the realistic scneario: 
+            (1) <b>fault-tolerance (passice safety)</b> along the controlled trajectory, and (2) <b>presence of uncertianty</b> (e.g., navigation, actuation, unmodeled dynamics)).
+            In order to generate the robust trajectories, <b>chance-constrained optimal control problem (CC-OCP)</b> is formulated.  
+            The trajectory dataset contains 115,000 samples of Low Earth Orbit (LEO) rendezvous trajectories. 
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="columns is-centered">
+      <div class="content has-text-centered">
+        <img src="./static/images/v12_train_data.png"
+        height="400px" width="600px"/>
+      </div>
+    </div>
+
+
     <div class="content has-text-justified">
       <p>
-        Sample.
+        Sample. 
       </p>
     </div>
 
-    <!-- Paper video. -->
-    <!-- <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
+
+    <div class="columns is-centered">
+      <div class="content has-text-centered">
+        <img src="./static/images/sample_ps_traj.png"
+        height="400px" width="600px"/>
       </div>
-    </div> -->
-    <!--/ Paper video. -->
+    </div>
+
+    
+
+
   </div>
 </section>
 
